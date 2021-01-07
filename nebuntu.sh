@@ -61,8 +61,8 @@ openssl x509 -req -days 365 -in /etc/ssl/server.csr -signkey /etc/ssl/private/se
 
 cat > /etc/nginx/sites-enabled/default <<EOF
 server {
-  #listen   80; ## listen for ipv4; this line is default and implied
-  #listen   [::]:80 default_server ipv6only=on; ## listen for ipv6
+  listen   80; ## listen for ipv4; this line is default and implied
+  listen   [::]:80 default_server ipv6only=on; ## listen for ipv6
 
   client_max_body_size 128m;
 
